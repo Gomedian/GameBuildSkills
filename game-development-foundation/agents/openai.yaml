@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Development Foundation"
+  short_description: "Design and review reusable game systems by genre"
+  default_prompt: "Inspect this game project and produce an evidence-based design, implementation plan, or review using the matching genre profile."
