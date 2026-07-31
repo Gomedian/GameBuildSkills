@@ -1,6 +1,6 @@
 ---
 name: game-development-foundation
-description: Plan, design, implement, diagnose, review, or test reusable game systems for platformers, metroidvanias, and roguelike turn-based dungeon crawlers. Use for new game foundations, movement, combat, enemies, encounters, inventory, progression, world structure, procedural dungeons, saves, pooled feedback, debugging, implementation instructions, and branch reviews. Inspect the real project before prescribing architecture, then load only the matching genre and engine references.
+description: Audit, plan, design, implement, diagnose, review, or test reusable game foundations and gameplay systems for Unity or Godot projects, including platformers, metroidvanias, and roguelike turn-based dungeon crawlers. Use for project bootstrap, scene flow, UI navigation, popups, pause, input contexts, settings, saves, audio, content registries, movement, combat, inventory, progression, procedural dungeons, debugging, implementation instructions, and branch reviews. Inspect the real project before prescribing architecture, then load only the matching foundation, genre, and engine references.
 ---
 
 # Game Development Foundation
@@ -24,7 +24,9 @@ Do not invent class names, paths, APIs, serialized fields, or scene assignments.
 Read only what the task needs:
 
 - Always use [core-architecture.md](references/core-architecture.md) for architectural or implementation work.
+- Read [foundation-modules.md](references/foundation-modules.md) when auditing, planning, creating, or reviewing reusable project foundations.
 - Read [engine-unity.md](references/engine-unity.md) for Unity projects.
+- Read [engine-godot.md](references/engine-godot.md) for Godot projects.
 - Read [genre-platformer.md](references/genre-platformer.md) for platformer movement, collision, cameras, checkpoints, or platform combat.
 - For metroidvania work, read both [genre-platformer.md](references/genre-platformer.md) and [genre-metroidvania.md](references/genre-metroidvania.md).
 - Read [genre-turnbased-dungeon-crawler.md](references/genre-turnbased-dungeon-crawler.md) for turn authority, command resolution, seeded generation, grid AI, or run persistence.
@@ -34,14 +36,17 @@ If the game crosses profiles, state which rules apply to each subsystem. Do not 
 
 ## Workflow
 
-1. Restate the player-facing goal and the invariant that must remain true.
-2. Trace the current runtime path from input or trigger to final state and presentation.
-3. Identify the smallest authoritative owner that can enforce the rule.
-4. Define data, runtime states, transitions, failure paths, reset behavior, and persistence.
-5. Define engine/scene/editor integration separately from runtime code.
-6. Specify deterministic tests and a short real-play verification route.
-7. Implement only when requested. Preserve unrelated work.
-8. Review the resulting diff against the contract, not merely compilation success.
+1. Classify the request as project audit, foundation planning, implementation, diagnosis, or review.
+2. For a Godot foundation audit, use the sibling `godot-project-auditor` skill first when available, then inspect its reported candidates.
+3. Restate the player-facing goal and the invariant that must remain true.
+4. Trace the current runtime path from input or trigger to final state and presentation.
+5. Identify the smallest authoritative owner that can enforce the rule.
+6. Define data, runtime states, transitions, failure paths, reset behavior, and persistence.
+7. For foundation work, classify every requested module as reuse, configure, integrate, generate, replace, or defer.
+8. Define engine/scene/editor integration separately from runtime code.
+9. Specify deterministic tests and a short real-play verification route.
+10. Implement only when requested. Preserve unrelated work.
+11. Review the resulting diff against the contract, not merely compilation success.
 
 ## System boundaries
 
