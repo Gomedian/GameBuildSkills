@@ -37,15 +37,16 @@ If the game crosses profiles, state which rules apply to each subsystem. Do not 
 ## Workflow
 
 1. Classify the request as project audit, foundation planning, implementation, diagnosis, or review.
-2. Restate the player-facing goal and the invariant that must remain true.
-3. Trace the current runtime path from input or trigger to final state and presentation.
-4. Identify the smallest authoritative owner that can enforce the rule.
-5. Define data, runtime states, transitions, failure paths, reset behavior, and persistence.
-6. For foundation work, classify every requested module as reuse, configure, integrate, generate, replace, or defer.
-7. Define engine/scene/editor integration separately from runtime code.
-8. Specify deterministic tests and a short real-play verification route.
-9. Implement only when requested. Preserve unrelated work.
-10. Review the resulting diff against the contract, not merely compilation success.
+2. For a Godot foundation audit, use the sibling `godot-project-auditor` skill first when available, then inspect its reported candidates.
+3. Restate the player-facing goal and the invariant that must remain true.
+4. Trace the current runtime path from input or trigger to final state and presentation.
+5. Identify the smallest authoritative owner that can enforce the rule.
+6. Define data, runtime states, transitions, failure paths, reset behavior, and persistence.
+7. For foundation work, classify every requested module as reuse, configure, integrate, generate, replace, or defer.
+8. Define engine/scene/editor integration separately from runtime code.
+9. Specify deterministic tests and a short real-play verification route.
+10. Implement only when requested. Preserve unrelated work.
+11. Review the resulting diff against the contract, not merely compilation success.
 
 ## System boundaries
 
