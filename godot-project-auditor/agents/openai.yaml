@@ -1,0 +1,5 @@
+interface:
+  display_name: "Godot Project Auditor"
+  short_description: "Inspect Godot projects before foundation changes"
+  default_prompt: "Use $godot-project-auditor to inspect this Godot project and report its existing foundation, wiring risks, and missing evidence."
+
