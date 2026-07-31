@@ -1,4 +1,4 @@
 interface:
   display_name: "Game Development Foundation"
-  short_description: "Design and review reusable game systems by genre"
-  default_prompt: "Use $game-development-foundation to inspect this game project and produce an evidence-based design, implementation plan, or review using the matching genre profile."
+  short_description: "Audit and build reusable Unity and Godot foundations"
+  default_prompt: "Use $game-development-foundation to audit this game project and plan the smallest reusable foundation that fits its engine, genre, and existing architecture."

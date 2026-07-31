@@ -2,6 +2,48 @@
 
 Use the narrowest template matching the request. Replace every placeholder with evidence or mark it unresolved.
 
+## Project foundation audit
+
+```markdown
+# <Project> foundation audit
+
+## Project facts
+- Engine/version:
+- Language/toolchain:
+- Targets:
+- Entry point:
+- Existing services/add-ons/packages:
+
+## Current authorities
+| Concern | Owner | Evidence | Confidence |
+| --- | --- | --- | --- |
+
+## Requested capabilities
+## Conflicts and duplicate ownership
+## Missing evidence
+## Recommended next inspection
+```
+
+## Foundation installation plan
+
+```markdown
+# <Project> foundation plan
+
+## Goal and non-goals
+## Confirmed existing foundation
+## Module decisions
+| Module | Reuse/configure/integrate/generate/replace/defer | Reason | Dependencies |
+| --- | --- | --- | --- |
+
+## Startup and dependency order
+## Public contracts and state ownership
+## Files and engine/editor integration
+## Migration and compatibility
+## Validators and tests
+## Real-play verification
+## Remaining user decisions
+```
+
 ## System contract
 
 ```markdown
